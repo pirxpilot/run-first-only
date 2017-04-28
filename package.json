@@ -1,0 +1,30 @@
+{
+  "name": "run-first-only",
+  "version": "0.0.0",
+  "description": "Execute only first call of the async function.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.om",
+    "url": "https://furkot.com"
+  },
+  "repository": "pirxpilot/run-first-only",
+  "license": "MIT",
+  "keywords": [
+    "run-first-only",
+    "async",
+    "once",
+    "memoize"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "mocha": "^3.3.0",
+    "should": "^11.2.1"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js"
+  ]
+}
