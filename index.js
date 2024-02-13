@@ -1,8 +1,10 @@
 module.exports = runOnce;
 
 function runOnce(asyncFn) {
-  var queue = [];
-  var results;
+  let queue = [];
+  let results;
+
+  return worker;
 
   function worker(next) {
     if (results) {
@@ -12,13 +14,11 @@ function runOnce(asyncFn) {
     queue.push(next);
 
     if (queue.length === 1) {
-      asyncFn(function() {
+      asyncFn(function () {
         results = arguments;
         queue.forEach(worker);
         queue = undefined;
       });
     }
   }
-
-  return worker;
 }

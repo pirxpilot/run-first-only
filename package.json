@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.om",
     "url": "https://furkot.com"
   },
-  "repository": "pirxpilot/run-first-only",
+  "repository": "github:pirxpilot/run-first-only",
   "license": "MIT",
   "keywords": [
     "run-first-only",
@@ -17,9 +17,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "jshint": "^2.9.4",
-    "mocha": "^3.3.0",
-    "should": "^11.2.1"
+    "@pirxpilot/jshint": "~3",
+    "should": "~13"
   },
   "scripts": {
     "test": "make check"

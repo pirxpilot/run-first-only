@@ -1,6 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][gemnasium-image]][gemnasium-url]
+[![Build Status][build-image]][build-url]
+[![Dependency Status][deps-image]][deps-url]
 
 # run-first-only
 
@@ -44,11 +44,11 @@ MIT © [Damian Krzeminski](https://furkot.com)
 
 [async.memoize]: http://caolan.github.io/async/docs.html#memoize
 
-[npm-image]: https://img.shields.io/npm/v/run-first-only.svg
+[npm-image]: https://img.shields.io/npm/v/run-first-only
 [npm-url]: https://npmjs.org/package/run-first-only
 
-[travis-url]: https://travis-ci.org/pirxpilot/run-first-only
-[travis-image]: https://img.shields.io/travis/pirxpilot/run-first-only.svg
+[build-url]: https://github.com/pirxpilot/run-first-only/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/run-first-only/check.yaml?branch=main
 
-[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/run-first-only.svg
-[gemnasium-url]: https://gemnasium.com/pirxpilot/run-first-only
+[deps-image]: https://img.shields.io/librariesio/release/npm/run-first-only
+[deps-url]: https://libraries.io/npm/run-first-only
