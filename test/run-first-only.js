@@ -1,8 +1,10 @@
+const { describe, it } = require('node:test');
+
 var should = require('should');
 var runFirstOnly = require('../');
 
 describe('run-first-only', function () {
-  it('should only call callback once when serial', function (done) {
+  it('should only call callback once when serial', function (_, done) {
     var v = 0;
     var doThis = runFirstOnly(function(fn) {
       setTimeout(function() {
@@ -23,7 +25,7 @@ describe('run-first-only', function () {
     });
   });
 
-  it('should only call callback once when parallel', function (done) {
+  it('should only call callback once when parallel', function (_, done) {
     var ITER = 5;
     var v = 0;
     var called = 0;
