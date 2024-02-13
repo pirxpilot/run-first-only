@@ -1,22 +1,22 @@
 const { describe, it } = require('node:test');
 
-var should = require('should');
-var runFirstOnly = require('../');
+const should = require('should');
+const runFirstOnly = require('../');
 
 describe('run-first-only', function () {
   it('should only call callback once when serial', function (_, done) {
-    var v = 0;
-    var doThis = runFirstOnly(function(fn) {
-      setTimeout(function() {
+    let v = 0;
+    const doThis = runFirstOnly(function (fn) {
+      setTimeout(function () {
         fn(null, ++v);
       }, 5);
     });
 
-    doThis(function(err, value) {
+    doThis(function (err, value) {
       should.not.exist(err);
       value.should.eql(1);
 
-      doThis(function(err, value) {
+      doThis(function (err, value) {
         should.not.exist(err);
         value.should.eql(1);
 
@@ -26,12 +26,12 @@ describe('run-first-only', function () {
   });
 
   it('should only call callback once when parallel', function (_, done) {
-    var ITER = 5;
-    var v = 0;
-    var called = 0;
+    const ITER = 5;
+    let v = 0;
+    let called = 0;
 
-    var doThis = runFirstOnly(function(fn) {
-      setTimeout(function() {
+    const doThis = runFirstOnly(function (fn) {
+      setTimeout(function () {
         fn(null, ++v);
       }, 5);
     });
@@ -45,7 +45,7 @@ describe('run-first-only', function () {
       }
     }
 
-    for(var i = 0; i < ITER; i++) {
+    for (let i = 0; i < ITER; i++) {
       doThis(callback);
     }
   });
